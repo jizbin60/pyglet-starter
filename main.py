@@ -13,12 +13,20 @@ door = pyglet.image.load('assets/hero/Old hero.png')
 cat = pyglet.image.load('assets/hero/Old hero.png')
 dog = pyglet.image.load('assets/hero/Old hero.png')
 goat = pyglet.image.load('assets/hero/Old hero.png')
+
+
 rat = pyglet.image.load('sheet.png')
+rat = pyglet.sprite.Sprite(rat, x = -20, y = 380)
 # spr = pyglet.sprite.Sprite(img, x=50, y=50)
 
+keys = pyglet.window.key.KeyStateHandler()
 # Start the event loop
 def update(dt):
-  pass
+  rat.x += 1
+if keys[key.SPACE]:
+  print("Spacebar pressed!")
+if keys[key.UP]:
+  print("Up key pressed!")
 
 
 @win.event
@@ -32,7 +40,8 @@ def on_draw():
     cat.blit(444, 123)
     dog.blit(110,100)
     goat.blit(198, 300)
-    rat.blit(-20, 380)
+    
+    rat.draw()
     #img.blit(400, 100)
     # spr.draw()
 
