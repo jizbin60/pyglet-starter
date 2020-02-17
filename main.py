@@ -20,13 +20,14 @@ rat = pyglet.sprite.Sprite(rat, x = -20, y = 380)
 # spr = pyglet.sprite.Sprite(img, x=50, y=50)
 
 keys = pyglet.window.key.KeyStateHandler()
+win.push_handlers(keys)
+
 # Start the event loop
 def update(dt):
-  rat.x += 1
-if keys[key.SPACE]:
-  print("Spacebar pressed!")
-if keys[key.UP]:
-  print("Up key pressed!")
+  rat.x -= 1
+if keys[pyglet.window.key.LEFT]
+
+
 
 
 @win.event
